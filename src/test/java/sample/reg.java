@@ -16,7 +16,6 @@ public class reg {
 	public void RegisterUser() {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver ();	
-		WebDriverWait wait = new WebDriverWait(driver,30);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://spicejet.com");	
@@ -27,6 +26,6 @@ public class reg {
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("ct100_maincontent_ddl_destinationStation1_CTXT")).sendKeys("GOI");
 	    driver.findElement(By.xpath("//td[@data-month='7]/a[text()='24]")).click();
-
+        
 		
 }
